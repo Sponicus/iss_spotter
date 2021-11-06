@@ -19,7 +19,7 @@ const fetchMyIP = function(callback) {
     }
   });
 };
-
+//////////////////////////IP ADDRESS FUNCTION DOESNT MATTER BECAUSE API IS SET TO A SPECIFIC ADDRESS//////////////////////////
 
 const fetchCoordsByIP = (data, callback) => {
   // const ipAddress = "8.8.8.8"
