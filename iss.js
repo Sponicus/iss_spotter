@@ -23,9 +23,9 @@ const fetchMyIP = function(callback) {
 
 const fetchCoordsByIP = (data, callback) => {
   // const ipAddress = "8.8.8.8"
-  const apiKey = 'a6ce4f10-3f36-11ec-9952-35cfeaa50a39'
-  request(`https://api.freegeoip.app/json/?apikey=${apiKey}`, (error, response, body) => {
-    const {latitude, longitude} = JSON.parse(body);    
+  // const apiKey = 'a6ce4f10-3f36-11ec-9952-35cfeaa50a39'
+  request(`https://freegeoip.app/json/${data}`, (error, response, body) => {
+    const {latitude, longitude} = JSON.parse(body);
     if (error) {
       callback(error);
       return;
@@ -37,6 +37,6 @@ const fetchCoordsByIP = (data, callback) => {
     }
     callback(null, {latitude, longitude});
 
-  })
+  });
 };
 module.exports = {fetchMyIP,fetchCoordsByIP};
